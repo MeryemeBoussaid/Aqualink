@@ -1,16 +1,18 @@
-# aqualink
+# Aqualink
 
-A new Flutter project.
+Aqualink is a modular smart water management Flutter application designed to monitor and control water usage through smart sensors.
 
 ## Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Design Prototype
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The UI/UX design prototypes are available on Figma:  
+[Open the Figma project](https://www.figma.com/design/ZWUFo0NlhNNed0zCi5fKgU/CodeBleu-Hachathon?node-id=0-492&t=mjEYaaigwTbhbmhL-0)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to Run
+
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/MeryemeBoussaid/Aqualink.git
