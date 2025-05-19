@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart'; // Import Firebase core
 import 'screens/dashboard.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();  // Assure l'initialisation Flutter avant Firebase
+  await Firebase.initializeApp();             // Initialise Firebase
+
   runApp(const AquaLinkApp());
 }
 

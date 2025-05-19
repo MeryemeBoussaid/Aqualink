@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "728621266610",
+    "project_id": "aqualink-494fd",
+    "storage_bucket": "aqualink-494fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728621266610:android:e2405ecf8e05f805013bab",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxwit1YuWkg3xz3dzrMxdOKxfu2I4A45A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

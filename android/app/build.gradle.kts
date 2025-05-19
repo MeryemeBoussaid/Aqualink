@@ -1,14 +1,21 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
-    namespace = "com.example.aqualink"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    namespace = "com.android.application"
+    compileSdk = 34 // ou flutter.compileSdkVersion si tu préfères
+    ndkVersion = "29.0.13113456"
+
+    defaultConfig {
+        applicationId = "com.android.application"
+        minSdk = 21 // ou flutter.minSdkVersion
+        targetSdk = 34 // ou flutter.targetSdkVersion
+        versionCode = 1 // ou flutter.versionCode
+        versionName = "1.0" // ou flutter.versionName
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -16,24 +23,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
-
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.aqualink"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        jvmTarget = "11"
     }
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
     }
@@ -42,3 +36,11 @@ android {
 flutter {
     source = "../.."
 }
+
+// Important : appliquer le plugin google-services ici, à la fin
+apply(plugin = "com.google.gms.google-services")
+
+tasks.withType<JavaCompile> {
+    options.compilerArgs.add("-Xlint:-options")
+}
+
